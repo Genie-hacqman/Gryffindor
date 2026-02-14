@@ -57,8 +57,7 @@ marcus oware/
 
 ## 🧑‍💻 How to Contribute (Step-by-Step)
 
-### 1️⃣ Fork the Repository
-
+### 1️⃣ Fork the Repo
 - Click **Fork** on the top right of this repository
 - This creates your own copy on GitHub
 
@@ -82,8 +81,8 @@ mkdir marcusoware
 
 ### 4️⃣ Add Your Work
 
-- Place all files inside your folder
-- Organize your work clearly (you may use subfolders if needed)
+ Place all files inside your folder
+ Organize your work clearly (you may use subfolders if needed)
 
 Example:
 ```
