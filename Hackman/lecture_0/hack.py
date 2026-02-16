@@ -6,6 +6,6 @@ print(f"hello '{name}' and you are {age} years old")
 
 print(f"hello {name.capitalize()}")
 
-name = hackman
+name = "hackman"
 print(name)
 
