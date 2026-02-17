@@ -19,4 +19,6 @@ print(f"hello '{name}' and you are {age} years old")
 
 
 
+name = "hackman"
+print(name)
 
