@@ -18,6 +18,7 @@ def parity(num):
         return "even"
     else:
         return "odd"
+    
 while True:    
     try:
         user_input = int(input("Enter num: "))
