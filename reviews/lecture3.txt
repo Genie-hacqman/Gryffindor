@@ -1,0 +1,44 @@
+hawa: 
+    you add two folders which one is your main folder.
+    I also noticed you your parity function 
+    you need a docstring withing the function to tell us 
+    what your function is doing .
+    this is for the whole class too .
+
+Bengee: 
+    You actually did the assignment but the main problem was that you did not really do the second assignment .
+    using f-string is not a must if you only need a simple string .
+    you did well and i think you should add  commenting to 
+    your codebase.
+
+Hackman: 
+    you source code it self was good but i have a problem with your comment and and the way you use # single line comments 
+    plus make sure you properly review all the code before you push to github . """ the three strings is very disturbing at the end of your code .
+
+mr.Odo Nti:
+    I noticed that you worked on the repo as usual , but the main problem is that after a break . you were meant to stop indentation so you code wll run but i guess it will never run . please before pushing any code or source code to me . test it  out yourselves.
+
+Newton : 
+    One of the greatest things i saw in you code was improvements . you have improved alot and  trust me . 
+    now i know you understand what you are doing . but 
+    there is something about how you guys comment a function
+    and where you choose to place your single line comments.
+    in all you did well.
+
+Ephraim:
+    is now a an advance pythonista . he builds things with his python but i also have problem with your codebase .
+    you do not need alot  , but just this much . commenting your code really well and even arrangement of the code matters.
+    in all well done.
+
+Sandra: 
+    i had a simple question about your all your codebase.
+    did you write those code yourself . Or someone assisted you .Be it a person or ai. I noticed a slight change in how you write you codes in class and the one that was in the  codebase. If you did it yourself. This is awesome.
+     i am even surprise cos it means you are also learning ahead i also have problem with your commenting and the arrangement of your codes. 
+     it runs but  they are so piled together .
+     in all well done .
+
+
+the rest:
+    yet to receive your push .
+    except Mase and Duncan what really really happened.
+
