@@ -1,0 +1,49 @@
+
+
+
+/* .box{
+animation: move 1s ease infinite;
+position: relative;
+} */
+
+
+.imgg{
+    position: relative;
+    animation: move 2s ease-in-out infinite;
+    
+}
+
+
+@keyframes move{
+    0%{
+        top: 0; left: 0;
+    }
+
+    20%{
+        top: 0;
+        left: 500px;
+    
+
+    }
+
+    40%{
+        top: 0;
+        left: 1000px;   
+
+    }
+
+    60%{
+        left:1000px;
+        top:500px
+    }
+
+    80%{
+        left: 0;
+        top: 500px;
+    }
+
+    100%{
+        top: 0;
+        left: 0;
+    }
+}
