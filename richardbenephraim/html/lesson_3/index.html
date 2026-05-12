@@ -7,18 +7,18 @@
     <link rel="stylesheet" href="../src/output.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
+<body class="bg-slate-900 text-white">
 
-    
-    <header class=" flex justify-between bg-[#42358a]">
+
+    <header class=" flex justify-between bg-[#42358a] p-4 ">
         <!-- nav bar -->
-         <div>
-            <a href="#">localcodeTech</a>
+         <div class="bg-blue-300">
+            <a href="#" class="">localcodeTech</a>
         </div>
 
 
-         <div class="flex gap-4 bg-slate-500">
-            <nav class="flex gap-4 bg-[#44f082]">
+         <div class="flex gap-4 items-center">
+            <nav class="flex gap-4 ">
                 <!-- nav links -->
                     <a href=""><span>01.</span> home</a>
                     <a href=""><span>02.</span>experience</a>
@@ -28,7 +28,9 @@
             </nav>
 
                     <!-- cta =>  -->
-            <a href="">resume</a>
+            <div class=''>
+                <button class="text-teal-500 border rounded p-2 hover:-translate-y-1 hover:duration-500 hover:ease-out hover:shadow-lg hover:shadow-blue-100 hover:skew-6">resume</button>
+            </div>
 
 
          </div>
@@ -39,13 +41,13 @@
     <main>
         <!-- content  -->
 
-        <section>
+        <section class="py-10 max-w-md flex flex-col max-w-[50%] mx-auto">
             <!-- hero  -->
 
-            <h3>hi, my name is </h3>
-            <h1>Ben Ephraim</h1>
-            <p>
-                I'm a Full Stack Developer and MCR Technician dedicated to engineering high-performance digital systems and seamless broadcast workflows. Currently, I bridge the gap between robust code and real-time operations at Upstatement, building accessible, human-centered products that scale.
+            <h3 >hi, my name is </h3>
+            <h1 class="text-5xl font-extrabold ">Ben Ephraim</h1>
+            <p class="text-xs">
+                I'm a Full Stack Developer and MCR Technician dedicated to engineering high-performance digital systems and seamless broadcast workflows. Currently, I bridge the gap between robust code and real-time operations at <span class="hover:underline">localstreamgh</span>  , building accessible, human-centered products that scale.
             </p>
 
             <!-- cta => -->
@@ -91,7 +93,9 @@
                 <li>photoshop</li>
              </ul>
 
-         </section>
+         
+         
+            </section>
 
 
 
