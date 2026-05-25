@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors - Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-6">
+    <div class="w-full max-w-4xl">
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-bold text-white mb-2">Rock Paper Scissors</h1>
+            <p class="text-gray-400 text-lg">Test your strategy against the computer</p>
+        </div>
+
+        <!-- Game Container -->
+        <div class="grid grid-cols-2 gap-8 mb-12">
+            <!-- Player Card -->
+            <div class="bg-gradient from-blue-900/20 to-blue-800/10 border border-blue-500/30 rounded-2xl p-8 backdrop-blur-sm shadow-xl">
+                <h2 class="text-xl font-semibold text-blue-300 mb-6">Your Choice</h2>
+                <div id="user-choice" class="flex items-center justify-center h-48 bg-blue-500/10 rounded-xl border-2 border-blue-500/50">
+                    <div class="flex flex-col items-center gap-4">
+                        <span class="text-8xl text-blue-400">🎯</span>
+                        <span class="text-gray-400 text-lg font-medium">Select a choice</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Computer Card -->
+            <div class="bg-gradient from-gray-900/20 to-gray-800/10 border border-gray-600/30 rounded-2xl p-8 backdrop-blur-sm shadow-xl">
+                <h2 class="text-xl font-semibold text-gray-300 mb-6">Computer's Choice</h2>
+                <div id="computer-choice" class="flex items-center justify-center h-48 bg-gray-500/10 rounded-xl border-2 border-gray-500/50">
+                    <div class="flex flex-col items-center gap-4">
+                        <span class="text-8xl text-gray-400">🤖</span>
+                        <span class="text-gray-400 text-lg font-medium">Thinking...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Result Card -->
+        <div class="bg-gradient from-amber-900/20 to-amber-800/10 border border-amber-500/30 rounded-2xl p-8 mb-12 backdrop-blur-sm shadow-xl text-center">
+            <h3 class="text-sm uppercase tracking-widest text-amber-300 mb-3 font-semibold">Game Result</h3>
+            <h1 class="text-4xl font-bold text-white" id="result">Start Playing</h1>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex justify-center gap-6">
+            <button id="rock" class="group flex flex-col items-center gap-3 px-8 py-6 bg-blue-600/20 border-2 border-blue-500/50 rounded-xl hover:bg-blue-600/40 hover:border-blue-400 transition-all duration-300 shadow-lg hover:shadow-blue-500/50">
+                <i class="fa-solid fa-hand-back-fist text-3xl text-blue-400 group-hover:text-blue-300"></i>
+                <span class="text-sm font-medium text-blue-300">Rock</span>
+            </button>
+            <button id="sissors" class="group flex flex-col items-center gap-3 px-8 py-6 bg-purple-600/20 border-2 border-purple-500/50 rounded-xl hover:bg-purple-600/40 hover:border-purple-400 transition-all duration-300 shadow-lg hover:shadow-purple-500/50">
+                <i class="fa-solid fa-hand-scissors text-3xl text-purple-400 group-hover:text-purple-300"></i>
+                <span class="text-sm font-medium text-purple-300">Scissors</span>
+            </button>
+            <button id="papper" class="group flex flex-col items-center gap-3 px-8 py-6 bg-pink-600/20 border-2 border-pink-500/50 rounded-xl hover:bg-pink-600/40 hover:border-pink-400 transition-all duration-300 shadow-lg hover:shadow-pink-500/50">
+                <i class="fa-solid fa-hand text-3xl text-pink-400 group-hover:text-pink-300"></i>
+                <span class="text-sm font-medium text-pink-300">Paper</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="./play.js"></script>
+</body>
+</html>
