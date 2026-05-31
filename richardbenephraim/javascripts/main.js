@@ -47,3 +47,23 @@ console.log("charaters are less")
 };
 
 print()
+
+
+
+// function declaration
+
+function main(age, birthYear){
+    return birthYear - age;
+}
+const getResults = main(31, 2026)
+console.log(getResults)
+
+
+// function expression
+
+const calAge = function (){
+    return 23 * 5 -32
+};
+
+const total = calAge();
+console.log(total);
