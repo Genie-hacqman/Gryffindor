@@ -1,52 +1,55 @@
 
 
-// // variables
+// // // variables
 
 
 
-// // operators
+// // // operators
 
-// const c = 4
+// // const c = 4
 
-// console.log(c === "4")
+// // console.log(c === "4")
 
-// const h = undefined;
-
-
-// let myDate = new Date()
-
-// console.log(myDate)
+// // const h = undefined;
 
 
-// 2 == "2" ? console.log("hello") : console.log("bye")
+// // let myDate = new Date()
 
-// const num = 14;
-// const num2 = 0;
-//  const cc = num2 || num;
-
-//  console.log(cc)
-
-const name = 45;
+// // console.log(myDate)
 
 
-typeof name === "string" ? console.log(" this is a string") : console.log("not")
+// // 2 == "2" ? console.log("hello") : console.log("bye")
+
+// // const num = 14;
+// // const num2 = 0;
+// //  const cc = num2 || num;
+
+// //  console.log(cc)
+
+// const name = 45;
 
 
-console.log(typeof name)
+// typeof name === "string" ? console.log(" this is a string") : console.log("not")
 
 
-// == CONDITIONS ==
+// console.log(typeof name)
 
 
-let school = "open labs";
+// // == CONDITIONS ==
 
-if (school.length >= 9) {
-    console.log("this number has 9 or more pictures")
-} else {
-console.log("charaters are less")
-};
 
-print()
+// let school = "open labs";
+
+// if (school.length >= 9) {
+//     console.log("this number has 9 or more pictures")
+// } else {
+// console.log("charaters are less")
+// };
+// print()
+
+
+// terniary contion
+
 
 
 
@@ -67,3 +70,12 @@ const calAge = function (){
 
 const total = calAge();
 console.log(total);
+
+
+
+// arrow function 
+
+const calAge3 = birthYearNow => 2026 - birthYearNow;
+
+const age3 = calAge3(31);
+console.log(age3)
