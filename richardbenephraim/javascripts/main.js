@@ -79,3 +79,14 @@ const calAge3 = birthYearNow => 2026 - birthYearNow;
 
 const age3 = calAge3(31);
 console.log(age3)
+
+const project = (bill, paid) => {
+    const spent = bill + 2000;
+    const left = bill - paid;
+    const overAll = ` i ${spent} on the total amount of ${bill} when ${paid} \nwas paid. \nthank you`;
+
+    return overAll;
+}
+
+const invent = project (45000, 20000)
+console.log(invent)
