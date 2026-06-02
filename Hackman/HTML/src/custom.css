@@ -1,0 +1,39 @@
+/* Custom Dark Theme Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.glass-card {
+  backdrop-filter: blur(20px);
+  background: rgba(17, 24, 39, 0.7);
+  border-color: #22c55e;
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+  transition: 0.3s;
+}
+
+/* Dark theme hero gradients */
+.hero-bg {
+  background:
+    radial-gradient(circle at top left, rgba(34, 197, 94, 0.08), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(16, 185, 129, 0.08), transparent 35%),
+    #000000;
+}
+
+/* Smooth transitions */
+a {
+  transition: color 0.3s ease;
+}
+
+button {
+  transition: all 0.3s ease;
+}
+
+/* Green accent focus states */
+input:focus {
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
+}
