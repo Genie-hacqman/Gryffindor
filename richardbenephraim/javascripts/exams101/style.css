@@ -6,10 +6,19 @@
 }
 
 
+.maindiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+
 .box{
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 50px;
     margin-top: 50px;
     padding: 10px 15px;
 
@@ -33,4 +42,20 @@
 width: 500px;
 height: 500px;
 background-color: wheat;
+}
+
+#btn{
+    background-color: #8181e0;
+    padding: 1rem;
+    font-size: large;
+    border-radius: 10px;
+    font-family: sans-serif;
+    cursor: pointer;
+    text-transform: capitalize;
+    color: aqua;
+    border-color: blue;
+    
+    
+
+    
 }
