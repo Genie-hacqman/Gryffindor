@@ -9,3 +9,6 @@ btn.addEventListener('click', ()=>{
     console.log(`Hello its me Ephraim`)
     
 })
+
+const sect = document.getElementById('sect')
+
