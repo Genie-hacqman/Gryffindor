@@ -23,7 +23,7 @@
                 <a href="#" class="text-gray-600 hover:text-black">Contact</a>
             </nav>
             
-            <!-- Icons -->
+            <!-- Icons & Hamburger -->
             <div class="flex items-center space-x-4">
                 <button class="text-gray-600 hover:text-black">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -33,8 +33,25 @@
                 <button class="w-10 h-10 rounded-full bg-gradient from-orange-400 to-yellow-200 flex items-center justify-center text-white font-bold">
                     A
                 </button>
+                <!-- Hamburger Menu Button (Mobile) -->
+                <button id="hamburger" onclick="toggleMobileMenu()" class="md:hidden text-gray-600 hover:text-black ml-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
         </div>
+        
+        <!-- Mobile Menu -->
+        <nav id="mobileMenu" class="hidden md:hidden border-t border-gray-200 bg-white">
+            <div class="max-w-7xl mx-auto px-4 py-4 space-y-2">
+                <a href="#" class="block py-2 text-gray-600 hover:text-black">Collections</a>
+                <a href="#" class="block py-2 text-gray-600 hover:text-black">Men</a>
+                <a href="#" class="block py-2 text-gray-600 hover:text-black">Women</a>
+                <a href="#" class="block py-2 text-gray-600 hover:text-black">About</a>
+                <a href="#" class="block py-2 text-gray-600 hover:text-black">Contact</a>
+            </div>
+        </nav>
     </header>
 
     <!-- Main Content -->
@@ -115,5 +132,44 @@
             </div>
         </div>
     </main>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        function increaseQuantity() {
+            const quantityInput = document.getElementById('quantity');
+            quantityInput.value = parseInt(quantityInput.value) + 1;
+        }
+
+        function decreaseQuantity() {
+            const quantityInput = document.getElementById('quantity');
+            if (parseInt(quantityInput.value) > 1) {
+                quantityInput.value = parseInt(quantityInput.value) - 1;
+            }
+        }
+
+        function changeMainImage(imagePath) {
+            document.getElementById('mainImage').src = imagePath;
+        }
+
+        function selectColor(color, button) {
+            // Remove active border from all color buttons
+            document.querySelectorAll('[data-color]').forEach(btn => {
+                btn.classList.remove('border-orange-500');
+                btn.classList.add('border-gray-300');
+            });
+            // Add active border to selected color
+            button.classList.remove('border-gray-300');
+            button.classList.add('border-orange-500');
+        }
+
+        function addToCart() {
+            const quantity = document.getElementById('quantity').value;
+            alert(`Added ${quantity} item(s) to cart!`);
+        }
+    </script>
 </body>
 </html>
