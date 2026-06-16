@@ -1,4 +1,4 @@
-const url = "https://newsapi.org/v2/everything?q=Apple&from=2026-06-09&sortBy=popularity&apiKey=9355e32231984a7488b9f4c769d0be94"
+// const url = "https://newsapi.org/v2/everything?q=Apple&from=2026-06-09&sortBy=popularity&apiKey=9355e32231984a7488b9f4c769d0be94"
 // const data = fetch(url)
 
 
@@ -25,21 +25,41 @@ const url = "https://newsapi.org/v2/everything?q=Apple&from=2026-06-09&sortBy=po
 // Your assignment
 //  .use the newapi but this time us the other available route and display the list inside the browser using getdocumentbyID and map(), fetch etc
 
-const url2 = "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=9355e32231984a7488b9f4c769d0be94"
-async function getinfo() {
-    const data = await fetch(url2)
-    .then((res)=> res.json())
-    console.log(data.articles)
-    const newsContainer = document.getElementById("html")
-    data.articles.map((article) => {
-        const newsItem = document.createElement("div")
-        newsItem.className = "news-item"
-        newsItem.innerHTML = `
-            <h3>${article.title}</h3>
-            <p>${article.description}</p>
-            <a href="${article.url}" target="_blank">Read more</a>
-        `
-        newsContainer.append(newsItem)
-    })
+// const url2 = "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=9355e32231984a7488b9f4c769d0be94"
+// async function getinfo() {
+//     const data = await fetch(url2)
+//     .then((res)=> res.json())
+//     console.log(data.articles)
+//     const newsContainer = document.getElementById("html")
+//     data.articles.map((article) => {
+//         const newsItem = document.createElement("div")
+//         newsItem.className = "news-item"
+//         newsItem.innerHTML = `
+//             <h3>${article.title}</h3>
+//             <p>${article.description}</p>
+//             <a href="${article.url}" target="_blank">Read more</a>
+//         `
+//         newsContainer.append(newsItem)
+    // })
+// } 
+
+
+const usernameInput = document.getElementById("username");
+const passwordInput = document.getElementById("password");
+const submitButton = document.getElementById("submit");
+const userdetails = {
+    name: "",
+    password: ""    
 }
-getinfo()   
+usernameInput.addEventListener("keypress", (e) => { 
+    userdetails.name = e.target.value;
+}); 
+passwordInput.addEventListener("keypress", (e) => {
+    userdetails.password = e.target.value;
+});
+
+submitButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log(userdetails);
+    // console.log(userdetails.password);
+})
