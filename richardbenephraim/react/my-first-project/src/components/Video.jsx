@@ -3,7 +3,11 @@
 function VideoPlayer(props){
     return(
         <div>
-            {props.channelname}
+            <p>
+            {props.channelname} 
+           </p>
+
+           <p> {props.channelid}</p>
         </div>
     )
 }
