@@ -1,5 +1,5 @@
 import LikeButton from "./components/LikeButton";
-
+import MapChannel from "./components/MapChannel"
 
 
 
@@ -8,6 +8,8 @@ const App = ()=>{
     <div>
 
 <LikeButton />
+
+<MapChannel />
     </div>
   )
 };
