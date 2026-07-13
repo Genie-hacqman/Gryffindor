@@ -8,11 +8,7 @@ const App = ()=>{
 
   const url = "https://localcodetech.pythonanywhere.com//api/channels"
 
-  async function getData() {
-
-    const data = await fetch(url).then((res)=>res.json)
-    
-  }
+  
 
   return(
     <div>
@@ -20,6 +16,12 @@ const App = ()=>{
 <LikeButton />
 
 <MapChannel />
+
+
+
+<section>
+
+</section>
     </div>
   )
 };
