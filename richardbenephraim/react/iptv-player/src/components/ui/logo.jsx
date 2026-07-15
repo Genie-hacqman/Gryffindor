@@ -1,11 +1,12 @@
 
 
 
-const Logo =()=>{
+const Logo =({logoUrl})=>{
+    console.log(logoUrl)
     return(
 
         <div>
-            <img src={} alt="" loading="lazy"/>
+            <img src={logoUrl} alt="website logo" loading="lazy" width={"150"}/>
         </div>
     )
 };
