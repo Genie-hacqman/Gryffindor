@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!-- htmlhint css-validation:false -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneaker Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="text-2xl font-bold text-black">sneakers</div>
+            
+            <!-- Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="text-gray-600 hover:text-black">Collections</a>
+                <a href="#" class="text-gray-600 hover:text-black">Men</a>
+                <a href="#" class="text-gray-600 hover:text-black">Women</a>
+                <a href="#" class="text-gray-600 hover:text-black">About</a>
+                <a href="#" class="text-gray-600 hover:text-black">Contact</a>
+            </nav>
+            
+            <!-- Icons -->
+            <div class="flex items-center space-x-4">
+                <button class="text-gray-600 hover:text-black">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    </svg>
+                </button>
+                <button class="w-10 h-10 rounded-full bg-gradient from-orange-400 to-yellow-200 flex items-center justify-center text-white font-bold">
+                    A
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Product Images -->
+            <div>
+                <!-- Main Image -->
+                <div class="bg-gradient from-orange-400 to-yellow-200 rounded-lg mb-4 aspect-square flex items-center justify-center overflow-hidden" id="mainImageContainer">
+                    <img id="mainImage" src="assets/product1.jpg" alt="Fall Limited Edition Sneakers" class="w-full h-full object-contain p-8">
+                </div>
+                
+                <!-- Thumbnail Images -->
+                <div class="grid grid-cols-4 gap-4">
+                    <div class="bg-gradient from-orange-400 to-yellow-200 rounded-lg aspect-square flex items-center justify-center cursor-pointer hover:opacity-80 border-2 border-transparent hover:border-gray-400 transition" onclick="changeMainImage('assets/product1.jpg')">
+                        <img src="assets/product1.jpg" alt="View 1" class="w-full h-full object-contain p-3">
+                    </div>
+                    <div class="bg-gradient from-orange-400 to-yellow-200 rounded-lg aspect-square flex items-center justify-center cursor-pointer hover:opacity-80 border-2 border-transparent hover:border-gray-400 transition" onclick="changeMainImage('assets/product-2.jpg')">
+                        <img src="assets/product-2.jpg" alt="View 2" class="w-full h-full object-contain p-3">
+                    </div>
+                    <div class="bg-gradient from-orange-400 to-yellow-200 rounded-lg aspect-square flex items-center justify-center cursor-pointer hover:opacity-80 border-2 border-transparent hover:border-gray-400 transition" onclick="changeMainImage('assets/product-3.jpg')">
+                        <img src="assets/product-3.jpg" alt="View 3" class="w-full h-full object-contain p-3">
+                    </div>
+                    <div class="bg-gradient from-orange-400 to-yellow-200 rounded-lg aspect-square flex items-center justify-center cursor-pointer hover:opacity-80 border-2 border-transparent hover:border-gray-400 transition" onclick="changeMainImage('assets/image-product-2.jpg')">
+                        <img src="assets/image-product-2.jpg" alt="View 4" class="w-full h-full object-contain p-3">
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Product Details -->
+            <div class="flex flex-col justify-center">
+                <!-- Company Name -->
+                <p class="text-amber-500 font-semibold text-sm mb-2">SNEAKER COMPANY</p>
+                
+                <!-- Product Title -->
+                <h1 class="text-4xl md:text-5xl font-bold text-black mb-6">Fall Limited Edition Sneakers</h1>
+                
+                <!-- Description -->
+                <p class="text-gray-600 text-lg mb-8">
+                    These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole. They'll withstand everything the weather can offer.
+                </p>
+                
+                
+                <!-- Pricing Section -->
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-4xl font-bold text-black">$125.00</span>
+                        <span class="text-orange-500 font-semibold text-lg">50%</span>
+                    </div>
+                    <span class="text-gray-400 text-lg line-through">$250.00</span>
+                </div>
+                
+                <!-- Quantity and Color Selection -->
+                <div class="flex items-center gap-6 mb-8">
+                    <!-- Quantity Selector -->
+                    <div class="flex items-center border border-gray-300 rounded-lg">
+                        <button onclick="decreaseQuantity()" class="px-4 py-3 text-orange-500 font-bold text-xl hover:bg-gray-100 transition">−</button>
+                        <input type="number" id="quantity" value="1" min="1" class="w-16 text-center border-l border-r border-gray-300 py-3 text-lg" readonly>
+                        <button onclick="increaseQuantity()" class="px-4 py-3 text-orange-500 font-bold text-xl hover:bg-gray-100 transition">+</button>
+                    </div>
+                    
+                    <!-- Color Selection -->
+                    <div class="flex items-center gap-3">
+                        <div class="flex gap-3">
+                            <button onclick="selectColor('white', this)" class="w-12 h-12 rounded-lg bg-white border-2 border-gray-300 hover:border-black transition" title="White" data-color="white"></button>
+                            <button onclick="selectColor('tan', this)" class="w-12 h-12 rounded-lg bg-yellow-100 border-2 border-gray-300 hover:border-black transition" title="Tan" data-color="tan"></button>
+                            <button onclick="selectColor('gray', this)" class="w-12 h-12 rounded-lg bg-gray-400 border-2 border-gray-300 hover:border-black transition" title="Gray" data-color="gray"></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Add to Cart Button -->
+                <button onclick="addToCart()" class="w-full bg-orange-400 hover:bg-orange-500 text-white font-bold py-4 rounded-lg text-lg transition">
+                    Add To Cart
+                </button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
