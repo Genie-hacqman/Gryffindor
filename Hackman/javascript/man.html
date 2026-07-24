@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gene's Color Palette</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<style>
+        section {
+            background-color: var(--bg-clr);
+        }
+    </style>
+    
+</head>
+<body class="h-screen w-screen flex flex-col overflow-hidden select-none">
+
+    <header class="p-4 text-sm text-neutral-800 bg-white border-b border-neutral-100">
+        Press the <kbd class="bg-neutral-100 px-1.5 py-0.5 rounded border font-mono font-bold">spacebar</kbd> to change colors!
+    </header>
+
+    <main id="palette-container" class="flex flex-1 w-full h-full">
+        <!-- Each column uses a fixed Tailwind class pointing to a unique CSS variable -->
+
+        <section style="--bg-clr: #5CF64A;" class="flex-1 flex flex-col justify-end items-center pb-16  transition-colors duration-200">
+            <h2 class="hex-code text-2xl font-bold tracking-wider mb-2 text-black">#5CF64A</h2>
+        </section>
+        <section style="--bg-clr: #52b0e7a9;" class="flex-1 flex flex-col justify-end items-center pb-16  transition-colors duration-200">
+            <h2 class="hex-code text-2xl font-bold tracking-wider mb-2 text-black">#52b0e7a9</h2>
+        </section>
+        <section style="--bg-clr: #5eb5c22b;" class="flex-1 flex flex-col justify-end items-center pb-16  transition-colors duration-200">
+            <h2 class="hex-code text-2xl font-bold tracking-wider mb-2 text-black">#5eb5c22b</h2>
+        </section>
+        <section style="--bg-clr: #FFCAE9;" class="flex-1 flex flex-col justify-end items-center pb-16  transition-colors duration-200">
+            <h2 class="hex-code text-2xl font-bold tracking-wider mb-2 text-black">#FFCAE9</h2>
+        </section>
+        <section style="--bg-clr: #FF37A6;" class="flex-1 flex flex-col justify-end items-center pb-16 transition-colors duration-200">
+            <h2 class="hex-code text-2xl font-bold tracking-wider mb-2 text-black">#FF37A6</h2>
+        </section>
+        <section style="--bg-clr: #69e9ff9e;" class="flex-1 flex flex-col justify-end items-center pb-16 transition-colors duration-200">
+            <h2 class="hex-code text-2xl font-bold tracking-wider mb-2 text-black">#69e9ff9e</h2>
+        </section>
+        <section style="--bg-clr: #FFB347;" class="flex-1 flex flex-col justify-end items-center pb-16 transition-colors duration-200">
+            <h2 class="hex-code text-2xl font-bold tracking-wider mb-2 text-black">#FFB347</h2> 
+        </section>
+        <section style="--bg-clr: #f1190d;" class="flex-1 flex flex-col justify-end items-center pb-16 transition-colors duration-200">
+            <h2 class="hex-code text-2xl font-bold tracking-wider mb-2 text-black">#f1190d</h2>
+        </section>
+    </main>
+
+    <script>
+        const columns = document.querySelectorAll('#palette-container section');
+
+        function randomizePalette() {
+            columns.forEach(column => {
+
+                // 1. Generate random hex string using a simplified array map
+
+                const chars = '0123456789ABCDEF';
+                const randomColor = '#' + Array.from({ length: 6 }, () => chars[Math.floor(Math.random() * 16)]).join('');
+                
+                // 2. Update the CSS variable value directly
+
+                column.style.background = randomColor;
+
+                // 3. Update the text textContent
+                
+                column.querySelector('.hex-code').textContent = randomColor;
+            });
+        }
+
+        // Spacebar trigger logic
+        window.addEventListener('keydown', (event) => {
+            if (event.code === 'Space') {
+                event.preventDefault(); // Prevents layout jumping or scrolling
+                randomizePalette();
+            }
+        });
+    </script>
+</body>
+</html>
